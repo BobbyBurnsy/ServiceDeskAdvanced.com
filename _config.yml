@@ -1,0 +1,16 @@
+# _config.yml
+name: "SDA | Service Desk Advanced"
+description: "The foundationally secure, enterprise-grade orchestration platform designed to consolidate fragmented IT workflows. Service Desk Advanced uses beautiful, user-friendly graphical data to bridge the gap between Intune and Active Directory while minimizing your attack surface."
+url: "https://www.servicedeskadvanced.com"
+baseurl: "" # CRITICAL: Leave this completely empty for custom domains
+github_repo: "https://github.com/bobbyburnsy/ServiceDeskAdvanced"
+
+# Build settings
+markdown: kramdown
+permalink: /:basename/
+
+# Collections
+collections:
+  capabilities:
+    output: true
+    permalink: /capabilities/:title/
