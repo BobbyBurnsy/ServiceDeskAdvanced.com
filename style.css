@@ -395,7 +395,6 @@ section {
 
 .card-free { border-top: 4px solid var(--accent-green); }
 .card-pro { border-top: 4px solid var(--accent-blue); transform: scale(1.05); box-shadow: var(--shadow-md); z-index: 10; }
-.card-custom { border-top: 4px solid var(--accent-purple); }
 
 .pricing-tier { font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 .pricing-price { font-size: 3.5rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem; line-height: 1; }
