@@ -76,13 +76,11 @@ title: "Check PC Uptime"
 
         <h3 style="color: var(--text-primary); margin-bottom: 1rem;">How Junior Techs Learn This Tool:</h3>
         <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem;">
-            When Training Mode is enabled, Service Desk Advanced pauses execution to explain the PowerShell 5.1 logic used to query the operating system and calculate the timespan delta.
+            While Service Desk Advanced uses PowerShell and WMI in the background for speed, a junior technician should know how to check this manually using classic command-line tools. By utilizing Sysinternals PsExec, you can remotely execute the <code>systeminfo</code> command and pipe the output to <code>find</code> to instantly grab the exact boot time without needing complex PowerShell scripts.
         </p>
 
         <div class="mock-code">
-            <span class="var">$os</span> = <span class="cmd">Get-CimInstance</span> <span class="param">-ComputerName</span> <span class="var">$Target</span> <span class="param">-ClassName</span> <span class="str">Win32_OperatingSystem</span><br>
-            <span class="var">$boot</span> = <span class="var">$os</span>.LastBootUpTime<br>
-            <span class="var">$uptime</span> = (<span class="cmd">Get-Date</span>) - <span class="var">$boot</span>
+            <span class="cmd">psexec</span> <span class="str">\\</span><span class="var">$Target</span> <span class="cmd">systeminfo</span> | <span class="cmd">find</span> <span class="str">"System Boot Time"</span>
         </div>
 
         <div class="mock-inperson" style="border-left-color: var(--accent-blue); background: rgba(59, 130, 246, 0.05);">
